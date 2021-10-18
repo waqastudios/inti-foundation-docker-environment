@@ -34,7 +34,7 @@ You'll find a Makefile included that can run a series of commands that you can o
       - /usr/local/lib/node_modules/**inti-acf-starter**/node_modules
     working_dir: /var/www/html/wp-content/themes/**inti-acf-starter**
 ```
-
+ * Setup [mkcert](https://github.com/FiloSottile/mkcert) on your local machine. `cd` into the ./nginx/certs and create certs for 'localhost'
  * Run `make install` to build all the relevant Docker containers from images. This will also automatically download the latest version of WordPress.
  * Open https://localhost/ in your browser and set the same details found in docker-compose.yml (wpdb, wpdbuser, secret) and proceed to install WordPress via the browser.
 
