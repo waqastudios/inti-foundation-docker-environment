@@ -1,3 +1,6 @@
 /wordpress/*
+!/wordpress/.keep
 /mysql/*
+!/mysql/.keep
 /nginx/certs/*
+!/nginx/certs/.keep
