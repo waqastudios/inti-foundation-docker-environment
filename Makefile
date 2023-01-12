@@ -1,5 +1,6 @@
 up:
 	docker-compose up -d --build
+	@echo "Remove --build in Makefile after first use..."
 
 down:
 	docker-compose down
@@ -10,8 +11,8 @@ install: up
 configure:
 	docker-compose run --rm wp theme install https://github.com/waqastudios/inti-foundation/archive/refs/tags/v1.10.0.zip
 	docker-compose run --rm wp theme install --force https://github.com/waqastudios/inti-acf-starter/archive/refs/tags/v1.5.0.zip
-	docker-compose run --rm wp theme delete twentytwenty
-	docker-compose run --rm wp theme delete twentynineteen
+	docker-compose run --rm wp theme delete twentytwentytwo
+	docker-compose run --rm wp theme delete twentytwentyone
 	docker-compose run --rm wp plugin delete hello
 	docker-compose run --rm wp plugin install classic-editor --activate
 	docker-compose run --rm wp plugin install wordpress-importer --activate

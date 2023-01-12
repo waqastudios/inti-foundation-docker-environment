@@ -13,3 +13,11 @@ RUN chown wp:wp /var/www/html
 WORKDIR /var/www/html
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+
+RUN set -ex \
+    && apk add --no-cache --virtual .phpize-deps $PHPIZE_DEPS imagemagick-dev libtool \
+    && export CFLAGS="$PHP_CFLAGS" CPPFLAGS="$PHP_CPPFLAGS" LDFLAGS="$PHP_LDFLAGS" \
+    && pecl install imagick-3.4.3 \
+    && docker-php-ext-enable imagick \
+    && apk add --no-cache --virtual .imagick-runtime-deps imagemagick \
+    && apk del .phpize-deps

@@ -1,5 +1,6 @@
 /wordpress/*
 !/wordpress/.keep
+!/wordpress/.theme-unit-test-data.xml
 /mysql/*
 !/mysql/.keep
 /nginx/certs/*
