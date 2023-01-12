@@ -15,6 +15,7 @@ configure:
 	docker-compose run --rm wp theme delete twentytwentyone
 	docker-compose run --rm wp plugin delete hello
 	docker-compose run --rm wp plugin install classic-editor --activate
+	docker-compose run --rm wp plugin install classic-widgets --activate
 	docker-compose run --rm wp plugin install wordpress-importer --activate
 	docker-compose run --rm wp import ./theme-unit-test-data.xml --authors=skip
 
