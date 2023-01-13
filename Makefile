@@ -9,8 +9,8 @@ install: up
 	docker-compose run --rm wp core download
 	
 configure:
-	docker-compose run --rm wp theme install https://github.com/waqastudios/inti-foundation/archive/refs/tags/v1.10.0.zip
-	docker-compose run --rm wp theme install --force https://github.com/waqastudios/inti-acf-starter/archive/refs/tags/v1.5.0.zip
+	docker-compose run --rm wp theme install https://github.com/waqastudios/inti-foundation/archive/refs/tags/v1.11.2.zip
+	docker-compose run --rm wp theme install --force https://github.com/waqastudios/inti-acf-starter/archive/refs/tags/v1.6.1.zip
 	docker-compose run --rm wp theme delete twentytwentytwo
 	docker-compose run --rm wp theme delete twentytwentyone
 	docker-compose run --rm wp plugin delete hello
